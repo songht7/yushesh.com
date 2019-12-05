@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="renderer" content="webkit" />
+    <!-- Mobile Devices Support @begin -->
+    <meta content="no-cache,must-revalidate" http-equiv="Cache-Control" />
+    <meta content="no-cache" http-equiv="pragma" />
+    <meta content="0" http-equiv="expires" />
+    <meta content="telephone=no,address=no" name="format-detection" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="format-detection" content="telephone=yes" />
+    <!-- Mobile Devices Support @end -->
+    <meta name="screen-orientation" content="portrait">
+    <meta name="x5-orientation" content="portrait">
+    <title>御舍</title>
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <link rel="shortcut icon" href="fav.ico">
+    <link rel="stylesheet" href="./content/css/base.css">
+    <link rel="stylesheet" href="./content/css/style.css">
+    <!-- <link rel="stylesheet" href="./content/css/reset.css"> -->
+    <link rel="stylesheet" href="./content/css/media.css">
+    <!-- <script type="text/javascript" src="http://www.hkdomani.com/public/wap/js/rem.js"></script> -->
+    <script type="text/javascript" src="./content/script/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="./content/script/index.js"></script>
+    <script type="text/javascript" src="./content/script/masonry.pkgd.min.js"></script>
+</head>
+
+<body>
+    <div id="Wrapper" v-cloak>
+        <top-header></top-header>
+        <div id="project_introduce_container" class="pc_block">
+            <div class="text_box">
+                <div class="text_part_box fl">
+                    <div class="text_info_box">
+                        <!-- <p class="text_title">Architectural Design | 建築設計</p> -->
+                        <p class="text_content" style="white-space:nowrap;"><span class="text_title">项目名称</span> | {{detail.title}}</p>
+                    </div>
+                    <div class="text_info_box">
+                        <p class="text_content"><span class="text_title">主案设计</span> | {{detail.design}}</p>
+                    </div>
+                    <div class="text_info_box" v-if="detail.softDesign">
+                        <p class="text_content"><span class="text_title">软装设计师</span> | {{detail.softDesign}}</p>
+                    </div>
+                    <div class="text_info_box" v-if="detail.softDesignSub">
+                        <p class="text_content"><span class="text_title">软装设计助理</span> | {{detail.softDesignSub}}</p>
+                    </div>
+                    <div class="text_info_box" v-if="detail.partDesign">
+                        <p class="text_content"><span class="text_title">参与设计</span> | {{detail.partDesign}}</p>
+                    </div>
+                    <div class="text_info_box" v-if="detail.style">
+                        <p class="text_content"><span class="text_title">风格定位</span> | {{detail.style}}</p>
+                    </div>
+                </div>
+                <div class="text_part_box fr">
+                    <div class="text_info_box">
+                        <p class="text_content"><span class="text_title">项目地点</span> | {{detail.location}}</p>
+                    </div>
+                    <div class="text_info_box" v-if="detail.construction">
+                        <p class="text_content"><span class="text_title">施工单位</span> | {{detail.construction}}</p>
+                    </div>
+                    <div class="text_info_box" v-if="detail.area">
+                        <p class="text_content"><span class="text_title">建筑面积</span> | {{detail.area}}</p>
+                    </div>
+                </div>
+                <div class="clear"></div>
+            </div>
+        </div>
+        <div id="detail_main_container" class="pc_block">
+            <div class="detail_inner_container" id="pc_detail_container">
+                <template v-if="detail.designConcept">
+                    <p><span style="color: rgb(48, 48, 48);">设计概念</p>
+                    <p class="dtlCont">{{detail.designConcept}}</p>
+                    <p style="padding:0 0 15px"><span style="color: rgb(48, 48, 48);"></span></p>
+                </template>
+                <template v-if="detail.content">
+                    <div class="dtlCont"><div v-html="detail.content"></div></div>
+                    <p style="padding:0 0 15px"><span style="color: rgb(48, 48, 48);"></span></p>
+                </template>
+                <p style="padding:0 0 15px"><span style="color: rgb(48, 48, 48);"></span></p>
+                <div :class="[detail.dtlImgType?'grid-full':'grid']">
+                    <template v-for="img,k in detail.dtlImgs" :key="k">
+                        <div :class="['grid-item',detail.dtlImgType?'grid-item--full':'grid-item--width2','grid_reveal']" data-av-animation="self_slide_up"><img :src='"./content/product/pro_"+detail.id+"/"+img' style="" title="" /></div>
+                    </template>
+                </div>
+            </div>
+        </div>
+        <div class="mobile_main_page_body mobile_block" id="detail_container_mobile">
+            <div class="mobile_main_body_container">
+                <div class="mobile_project_info">
+                    <p class="deep_gray">项目名称 | {{detail.title}}</p>
+                    <p class="deep_gray">主案设计 | {{detail.design}}</p>
+                    <p class="deep_gray">项目地点 | {{detail.location}}</p>
+                    <p class="deep_gray">施工单位 | {{detail.construction}}</p>
+                    <p class="deep_gray" v-if="detail.area">建筑面积 | {{detail.area}}</p>
+                    <p style="padding:0 0 15px"><span style="color: rgb(48, 48, 48);"></span></p>
+                </div>
+                <template v-if="detail.designConcept">
+                    <p><span style="color: rgb(48, 48, 48);">设计概念</p>
+                    <p class="dtlCont">{{detail.designConcept}}</p>
+                    <p style="padding:0 0 15px"><span style="color: rgb(48, 48, 48);"></span></p>
+                </template>
+                <template v-if="detail.content">
+                    <div class="dtlCont"><div v-html="detail.content"></div></div>
+                    <p style="padding:0 0 15px"><span style="color: rgb(48, 48, 48);"></span></p>
+                </template>
+                <div class="moble_project_detail" id="mobile_detail_container">
+                    <div class="detail_inner_container" id="pc_detail_container">
+                        <div class="grid-mobile">
+                            <template v-for="img,i in detail.dtlImgs" :key="i">
+                                <div class="grid-item grid-item--width2 grid_reveal" data-av-animation="self_slide_up"><img :src='"./content/product/pro_"+detail.id+"/"+img' style="" title="" /></div>
+                            </template>
+                        </div>
+                    </div>
+                </div>
+                <mobile-share></mobile-share>
+            </div>
+        </div>
+        <footer-box></footer-box>
+    </div>
+    <script>
+    $(function() {
+        // $('.grid').masonry({
+        //     // options
+        //     itemSelector: '.grid-item',
+        //     columnWidth: 0
+        // });
+    });
+    </script>
+    <script type="text/javascript" src="./content/script/aniview.js"></script>
+    <script type="text/javascript" src="./content/script/fastclick.js"></script>
+    <script type="text/javascript" src="./content/script/jquery.mousewheel.min.js"></script>
+    <script style="text/javascript" src="./content/script/jquery.waypoints.min.js"></script>
+    <script type="text/javascript" src="./content/script/common.js"></script>
+    <script type="text/javascript" src="./content/script/Vue-v2.6.10.js"></script>
+    <script type="text/javascript" src="./content/script/dis/bundle.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="renderer" content="webkit" />
+    <!-- Mobile Devices Support @begin -->
+    <meta content="no-cache,must-revalidate" http-equiv="Cache-Control" />
+    <meta content="no-cache" http-equiv="pragma" />
+    <meta content="0" http-equiv="expires" />
+    <meta content="telephone=no,address=no" name="format-detection" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="format-detection" content="telephone=yes" />
+    <!-- Mobile Devices Support @end -->
+    <meta name="screen-orientation" content="portrait">
+    <meta name="x5-orientation" content="portrait">
+    <title>御舍</title>
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <link rel="shortcut icon" href="fav.ico">
+    <link rel="stylesheet" href="./content/css/base.css">
+    <link rel="stylesheet" href="./content/css/style.css">
+    <!-- <link rel="stylesheet" href="./content/css/reset.css"> -->
+    <link rel="stylesheet" href="./content/css/media.css">
+    <script type="text/javascript" src="./content/script/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="./content/script/index.js"></script>
+</head>
+
+<body>
+    <div id="Wrapper" v-cloak>
+        <top-header></top-header>
+        <div id="main_container" class="page_index_div">
+            <div class="main_inner_box">
+                <template v-for="pro,k in products">
+                    <template v-if="pro.showType!='single'">
+                        <div :class="['__project_box','__project_box--'+pro.showType]">
+                            <div :class="['case1','case'+(k+1)]" @click='winLocation(pro.id)'>
+                                <template v-for="c,i in pro.cover">
+                                    <div :class="['scroll_header','__img_box','__img_box--'+(i+1),'size'+c.size,'top'+c.top,'left'+c.left,'grid_reveal','ani_delay_'+(i+1)]" data-av-animation="self_slide_up" data-index="3">
+                                        <img :src="['./content/product/pro_'+pro.id+'/'+c.url]" alt="" />
+                                        <div :class="['__img_box__text','__img_box__text--'+pro.textRlign]" v-if="pro.txtPlace==(i+1)">
+                                            <p>主案设计 | {{pro.design}}</p>
+                                            <p>项目名称 | {{pro.title}}</p>
+                                            <p>项目地点 | {{pro.location}}</p>
+                                            <p>施工单位 | {{pro.designCom}}</p>
+                                            <p>建筑面积 | {{pro.area}}</p>
+                                        </div>
+                                    </div>
+                                </template>
+                            </div>
+                        </div>
+                    </template>
+                    <template v-else>
+                        <div :class="['scroll_header','__project_box','__project_box--'+pro.showType,'grid_reveal','ani_delay_1']" data-av-animation="self_slide_up" @click='winLocation(pro.id)' data-index="1">
+                            <img :src="['./content/product/pro_'+pro.id+'/'+pro.cover]" alt="">
+                            <div class="__img_box__text __img_box__text--right">
+                                <p>主案设计 | {{pro.design}}</p>
+                                <p>项目名称 | {{pro.title}}</p>
+                                <p>项目地点 | {{pro.location}}</p>
+                                <p>施工单位 | {{pro.designCom}}</p>
+                                <p>建筑面积 | {{pro.area}}</p>
+                            </div>
+                        </div>
+                    </template>
+                </template>
+            </div>
+            <footer-box></footer-box>
+        </div>
+    </div>
+    <script type="text/javascript" src="./content/script/aniview.js"></script>
+    <script type="text/javascript" src="./content/script/fastclick.js"></script>
+    <script type="text/javascript" src="./content/script/jquery.mousewheel.min.js"></script>
+    <script style="text/javascript" src="./content/script/jquery.waypoints.min.js"></script>
+    <script type="text/javascript" src="./content/script/common.js"></script>
+    <script src="./content/script/jquery-hover3d.min.js"></script>
+    <script type="text/javascript" src="./content/script/Vue-v2.6.10.js"></script>
+    
+    <!--
+    <script type="text/javascript" src="./content/script/lib/vue-components.js"></script>
+    <script type="text/javascript" src="./content/script/lib/vue-data.js"></script>-->
+    <script type="text/javascript" src="./content/script/dis/bundle.js"></script>
+    <script>
+    // $(".project_title").hover3d({
+    //     selector: ".title_img_box",
+    //     shine: false
+    // });
+
+    var block_rate = [0.692, 0.692, 0.515, 0.692, 0.338, 0.515, 1.046, 0.692, 1.4, 1.576];
+    </script>
+    <style>
+    @media screen and (max-width: 1366px) {
+        #new_footer_container p {
+            width: 90%;
+        }
+    }
+    </style>
+</body>
+
+</html>
