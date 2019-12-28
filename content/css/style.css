@@ -1641,7 +1641,7 @@ body.open .menu-main li a{
 }
 #mobile_footer_container .border-top-1px::before{border-color:#e3e3e3;}
 #mobile_header_container{width:100%;position:fixed;top:0;left:0;z-index:111;
-    height:3.33rem;
+    height:1.84rem;  /*height:3.33rem;*/
     /*background-color:#fff;*/
     -webkit-transition:height .3s cubic-bezier(0,.385,.345,1);
     -moz-transition:height .3s cubic-bezier(0,.385,.345,1);
@@ -1696,7 +1696,7 @@ body.open .menu-main li a{
     transform:skew(0);
 }
 
-#mobile_sub_nav_page .sub_nav_list{width:100%;position:absolute;top:0;left:0;font-size:.66rem;color:#303030;font-family:'itc_xlt',sans-serif;z-index:2;
+#mobile_sub_nav_page .sub_nav_list{width:100%;position:absolute;top:0;left:0;font-size:.45rem;color:#303030;font-family:'itc_xlt',sans-serif;z-index:2;
     -webkit-transition:.6s cubic-bezier(.19,1,.22,1);
     -moz-transition:.6s cubic-bezier(.19,1,.22,1);
     -o-transition:.6s cubic-bezier(.19,1,.22,1);
@@ -1710,10 +1710,10 @@ body.open .menu-main li a{
     -o-transform:translate3d(100%,0,0);
     transform:translate3d(100%,0,0);
 }
-#mobile_sub_nav_page .sub_nav_list .nav_sub_m{font-size:.5rem;}
+#mobile_sub_nav_page .sub_nav_list .nav_sub_m{font-size:.35rem;}
 #mobile_sub_nav_page .sub_nav_list ul{margin:3.73rem 0 0 .67rem;}
-#mobile_sub_nav_page .sub_nav_list ul li ul.nav_sub_m{margin:0.5rem 0 0 .5rem;}
-#mobile_sub_nav_page .sub_nav_list ul li{margin-top:.87rem;opacity:0;text-transform:uppercase;
+#mobile_sub_nav_page .sub_nav_list ul li ul.nav_sub_m{margin:0.3rem 0 0 .3rem;}
+#mobile_sub_nav_page .sub_nav_list ul li{margin-top:.4rem;opacity:0;text-transform:uppercase;
     -webkit-transform:translate3d(30%,0,0);
     -moz-transform:translate3d(30%,0,0);
     -o-transform:translate3d(30%,0,0);
@@ -1723,7 +1723,7 @@ body.open .menu-main li a{
     -o-transition:1.2s cubic-bezier(.19,1,.22,1);
     transition:1.2s cubic-bezier(.19,1,.22,1);
 }
-#mobile_sub_nav_page .sub_nav_list ul li ul.nav_sub_m li{margin-top:.4rem;}
+#mobile_sub_nav_page .sub_nav_list ul li ul.nav_sub_m li{margin-top:.3rem;}
 #mobile_sub_nav_page .sub_nav_list.active ul li{opacity:1;
     -webkit-transform:translate3d(0,0,0);
     -moz-transform:translate3d(0,0,0);

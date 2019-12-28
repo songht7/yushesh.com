@@ -199,21 +199,21 @@ $(function() {
     var $hide_banner_top = $('#hide_banner_top');
     $window.on('scroll', function() {
         if ($window.scrollTop() >= 80) {
-            $sub_nav_bts.addClass('show');
-            $mobile_header_container.css({
-                'height': '1.84rem'
-            });
+            // $sub_nav_bts.addClass('show');
+            // $mobile_header_container.css({
+            //     'height': '1.84rem'
+            // });
             $hide_banner_top.css({
                 'top': '1.84rem'
             });
 
         } else if ($window.scrollTop() == 0) {
-            if (!$('body').hasClass('caseShow')) {
-                $sub_nav_bts.removeClass('show');
-            }
-            $mobile_header_container.css({
-                'height': '3.33rem'
-            });
+            // if (!$('body').hasClass('caseShow')) {
+            //     $sub_nav_bts.removeClass('show');
+            // }
+            // $mobile_header_container.css({
+            //     'height': '3.33rem'
+            // });
             $hide_banner_top.css({
                 'top': '3.33rem'
             }).addClass('close');

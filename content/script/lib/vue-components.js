@@ -60,7 +60,7 @@ Vue.component('top-header', {
                 </div>
                 <div id="mobile_header_container" class="mobile_block">
                     <div class="mobile_top_logo" onClick="window.location.href='index.html'"><img src="./content/images/logo.png" alt="" /></div>
-                    <div id="sub_nav_bts">
+                    <div id="sub_nav_bts" class="show">
                         <i></i>
                         <i></i>
                         <i></i>
