@@ -114,7 +114,7 @@ module.exports = {
     "construction": "御舍（上海）建设工程有限公司",
     "area": "600㎡",
     "style": "",
-    "txtPlace": 6,
+    "txtPlace": 7,
     "textRlign": "right",
     "showType": "type_a",
     "cover": [{
@@ -157,5 +157,55 @@ module.exports = {
     "content": "",
     "dtlImgType": "full",
     "dtlImgs": ["1.jpg", "2.jpg", "3.jpg"]
+  }, {
+    "id": 36,
+    "ctg": 1,
+    "ctgName": "办公空间",
+    "title": "三银办公大楼",
+    "design": "李宏升",
+    "designCom": "御舍设计",
+    "location": "中国上海",
+    "area": "",
+    "construction": "御舍（上海）建设工程有限公司",
+    "area": "13000㎡",
+    "style": "",
+    "txtPlace": 6,
+    "textRlign": "right",
+    "showType": "type_a",
+    "cover": [{
+      "url": "c1.jpg",
+      "size": "420x440",
+      "left": "0",
+      "top": "0"
+    }, {
+      "url": "c2.jpg",
+      "size": "420x440",
+      "left": "440",
+      "top": "0"
+    }, {
+      "url": "c3.jpg",
+      "size": "420x440",
+      "left": "880",
+      "top": "0"
+    }, {
+      "url": "c4.jpg",
+      "size": "420x440",
+      "left": "0",
+      "top": "460"
+    }, {
+      "url": "c5.jpg",
+      "size": "420x440",
+      "left": "440",
+      "top": "460"
+    }, {
+      "url": "c6.jpg",
+      "size": "420x440",
+      "left": "880",
+      "top": "460"
+    }],
+    "designConcept": "",
+    "content": "",
+    "dtlImgType": "",
+    "dtlImgs": ["1.jpg", "2.jpg", "3.jpg", "4.jpg", "5.jpg", "6.jpg", "7.jpg"]
   }]
 };
