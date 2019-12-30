@@ -191,5 +191,25 @@ module.exports = {
         "content": "",
         "dtlImgType": "",
         "dtlImgs": ["1.jpg", "18.jpg", "2.jpg", "3.jpg", "4.jpg", "5.jpg", "6.jpg", "7.jpg", "8.jpg", "9.jpg", "10.jpg", "11.jpg", "12.jpg", "13.jpg", "14.jpg", "15.jpg", "16.jpg", "17.jpg"]
+    }, {
+        "id": 43,
+        "ctg": 4,
+        "ctgName": "商业空间",
+        "title": "建国龙吟日料餐厅",
+        "design": "李宏升",
+        "softDesign": "陈婷婷",
+        "partDesign": "王茜",
+        "designCom": "御舍设计",
+        "location": "江西九江",
+        "construction": "御舍（上海）建设工程有限公司",
+        "area": "300㎡",
+        "txtPlace": 1,
+        "textRlign": "right",
+        "showType": "single",
+        "cover": "c1.jpg",
+        "designConcept": "",
+        "content": "",
+        "dtlImgType": "",
+        "dtlImgs": ["1.jpg", "2.jpg", "3.jpg", "4.jpg", "5.jpg", "6.jpg", "7.jpg", "8.jpg", "9.jpg", "10.jpg", "11.jpg", "12.jpg", "13.jpg", "14.jpg", "15.jpg", "16.jpg", "17.jpg", "18.jpg", "19.jpg", "20.jpg", "21.jpg"]
     }]
 };
