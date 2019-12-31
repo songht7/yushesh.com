@@ -34,7 +34,7 @@
         <top-header></top-header>
         <div id="main_container" class="page_index_div">
             <div class="main_inner_box">
-                <template v-for="pro,k in products">
+                <template v-for="pro,k in products" v-if="!pro.delete">
                     <template v-if="pro.showType!='single'">
                         <div :class="['__project_box','__project_box--'+pro.showType]">
                             <div :class="['case1','case'+(k+1)]" @click='winLocation(pro.id)'>
@@ -77,7 +77,6 @@
     <script type="text/javascript" src="./content/script/common.js"></script>
     <script src="./content/script/jquery-hover3d.min.js"></script>
     <script type="text/javascript" src="./content/script/Vue-v2.6.10.js"></script>
-    
     <!--
     <script type="text/javascript" src="./content/script/lib/vue-components.js"></script>
     <script type="text/javascript" src="./content/script/lib/vue-data.js"></script>-->

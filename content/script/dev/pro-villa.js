@@ -185,7 +185,7 @@ module.exports = {
         "designConcept": "",
         "content": "",
         "dtlImgType": "",
-        "dtlImgs": ["1.png", "2.png", "3.png", "4.png", "5.png", "6.png"]
+        "dtlImgs": ["1.png", "3.png", "4.png", "5.png", "6.png"]
     }, {
         "id": 31,
         "ctg": 5,
@@ -247,6 +247,7 @@ module.exports = {
     }, {
         "id": 32,
         "ctg": 5,
+        "delete": true, //删除不显示
         "ctgName": "私宅样板房别墅",
         "title": "浙江余姚私宅",
         "design": "李宏升",
