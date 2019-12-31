@@ -55,7 +55,7 @@ module.exports = {
         }],
         "designConcept": "以象形文字中品字的形字以馬的蹄印演化而來，而馬的精神正是品優，品質、品格，代表著公司的三位股東精神，及企業形象",
         "content": "",
-        "dtlImgs": ["1.jpg", "2.jpg", "3.png", "4.jpg", "5.jpg", "6.jpg", "7.png", "8.png"]
+        "dtlImgs": ["1.jpg", "2.jpg", "3.jpg", "4.jpg", "5.jpg", "6.jpg", "7.jpg", "8.jpg"]
     }, {
         "id": 34,
         "ctg": 1,

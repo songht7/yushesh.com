@@ -132,7 +132,7 @@ module.exports = {
         "designConcept": "",
         "content": "",
         "dtlImgType": "",
-        "dtlImgs": ["1.png", "2.png", "3.png", "4.png"]
+        "dtlImgs": ["1.jpg", "2.jpg", "3.jpg", "4.jpg"]
     }, {
         "id": 30,
         "ctg": 5,
@@ -243,7 +243,7 @@ module.exports = {
         "designConcept": "",
         "content": "",
         "dtlImgType": "",
-        "dtlImgs": ["1.png", "2.png", "3.png", "4.png"]
+        "dtlImgs": ["1.jpg", "2.jpg", "3.jpg", "4.jpg"]
     }, {
         "id": 32,
         "ctg": 5,

@@ -46,7 +46,7 @@ module.exports = {
     "designConcept": "",
     "content": "",
     "dtlImgType": "full",
-    "dtlImgs": ["1.png", "2.png", "3.png"]
+    "dtlImgs": ["1.jpg", "2.jpg", "3.jpg"]
   }, {
     "id": 18,
     "ctg": 3,
@@ -99,7 +99,7 @@ module.exports = {
     "designConcept": "",
     "content": "",
     "dtlImgType": "full",
-    "dtlImgs": ["1.png", "2.png", "3.png"]
+    "dtlImgs": ["1.jpg", "2.jpg", "3.jpg"]
   }, {
     "id": 19,
     "ctg": 3,
@@ -169,7 +169,7 @@ module.exports = {
     "designConcept": "",
     "content": "",
     "dtlImgType": "full",
-    "dtlImgs": ["1.png", "2.png", "3.png"]
+    "dtlImgs": ["1.jpg", "2.jpg", "3.jpg"]
   }, {
     "id": 21,
     "ctg": 3,
@@ -233,7 +233,7 @@ module.exports = {
     "location": "浙江杭州",
     "construction": "稼禾（上海）建设工程有限公司",
     "area": "10000㎡",
-    "txtPlace": 6,
+    "txtPlace": 5,
     "textRlign": "right",
     "showType": "type_a",
     "cover": [{
