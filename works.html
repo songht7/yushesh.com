@@ -37,7 +37,7 @@
                 <template v-for="pro,k in products" v-if="!pro.delete">
                     <template v-if="pro.showType!='single'">
                         <div :class="['__project_box','__project_box--'+pro.showType]">
-                            <div :class="['case1','case'+(k+1)]" @click='winLocation(pro.id)'>
+                            <div :class="['case1','case'+(k+1)]" @click='winLocation(pro.id,pro.ctg)'>
                                 <template v-for="c,i in pro.cover">
                                     <div :class="['scroll_header','__img_box','__img_box--'+(i+1),'size'+c.size,'top'+c.top,'left'+c.left,'grid_reveal','ani_delay_'+(i+1)]" data-av-animation="self_slide_up" data-index="3">
                                         <img :src="['./content/product/pro_'+pro.id+'/'+c.url]" alt="" />
@@ -54,7 +54,7 @@
                         </div>
                     </template>
                     <template v-else>
-                        <div :class="['scroll_header','__project_box','__project_box--'+pro.showType,'grid_reveal','ani_delay_1']" data-av-animation="self_slide_up" @click='winLocation(pro.id)' data-index="1">
+                        <div :class="['scroll_header','__project_box','__project_box--'+pro.showType,'grid_reveal','ani_delay_1']" data-av-animation="self_slide_up" @click='winLocation(pro.id,pro.ctg)' data-index="1">
                             <img :src="['./content/product/pro_'+pro.id+'/'+pro.cover]" alt="">
                             <div class="__img_box__text __img_box__text--right">
                                 <p>主案设计 | {{pro.design}}</p>

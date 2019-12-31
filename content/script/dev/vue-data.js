@@ -21,8 +21,8 @@ new Vue({
         that.setData(); //async
     },
     methods: {
-        winLocation(id) {
-            window.location.href = '/pro_detail.html?id=' + id;
+        winLocation(id, ctgid) {
+            window.location.href = '/pro_detail.html?ctg=' + ctgid + '&id=' + id;
         },
         setData() {
             var that = this;

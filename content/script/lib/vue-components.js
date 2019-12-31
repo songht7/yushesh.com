@@ -25,7 +25,48 @@ Vue.component('top-header', {
       }
     }
   },
-  mounted: function () {},
+  data: function () {
+    return {
+      cnav: 0
+    };
+  },
+
+  mounted(e) {
+    var that = this;
+
+    var _ctg = that.GetUrlParam("ctg");
+
+    if (_ctg) {
+      that.cnav = _ctg;
+    } else {
+      that.cnav = 0;
+    }
+  },
+
+  methods: {
+    GetUrlParam(paraName) {
+      var url = window.location.toString();
+      var arrObj = url.split("?");
+
+      if (arrObj.length > 1) {
+        var arrPara = arrObj[1].split("&");
+        var arr;
+
+        for (var i = 0; i < arrPara.length; i++) {
+          arr = arrPara[i].split("=");
+
+          if (arr != null && arr[0] == paraName) {
+            return arr[1];
+          }
+        }
+
+        return "";
+      } else {
+        return "";
+      }
+    }
+
+  },
   template: `<div><div id="new_header_container" class="page_detail pc_block">
                     <div class="nmbHover">
                         <div class="top_logo" onClick="window.location.href='index.html'"><img src="./content/images/logo.png" alt="" /></div>
@@ -34,7 +75,7 @@ Vue.component('top-header', {
                             <li>
                                 <a href="works.html"><span>作品</span></a>
                                 <ul class="nav_sub">
-                                    <li v-for="c,i in ctgList" :key="i"><a :href='"works.html?ctg="+c.id'><span>{{c.label}}</span></a></li>
+                                    <li v-for="c,i in ctgList" :key="i" :class="[cnav==c.id?'cnav':'']"><a :href='"works.html?ctg="+c.id'><span>{{c.label}}</span></a></li>
                                 </ul>
                             </li>
                             <li><a href="job.html"><span>招聘</span></a></li>
@@ -51,7 +92,7 @@ Vue.component('top-header', {
                             </li>
                             <li><a href="works.html"><span>作品</span></a>
                                 <ul class="nav_sub">
-                                    <li v-for="c,k in ctgList" :key="k"><a :href='"works.html?ctg="+c.id'><span>{{c.label}}</span></a></li>
+                                    <li v-for="c,k in ctgList" :key="k" :class="[cnav==c.id?'cnav':'']"><a :href='"works.html?ctg="+c.id'><span>{{c.label}}</span></a></li>
                                 </ul></li>
                             <li><a href="job.html"><span>招聘</span></a></li>
                             <li><a href="contact.html"><span>联系我们</span></a></li>
@@ -73,7 +114,7 @@ Vue.component('top-header', {
                                 <li class="tri_delay_1">
                                     <a href="works.html">作品</a>
                                     <ul class="nav_sub_m">
-                                        <li v-for="c,l in ctgList" :key="l"><a :href='"works.html?ctg="+c.id'><span>{{c.label}}</span></a></li>
+                                        <li v-for="c,l in ctgList" :key="l" :class="[cnav==c.id?'cnav':'']"><a :href='"works.html?ctg="+c.id'><span>{{c.label}}</span></a></li>
                                     </ul>
                                 </li>
                                 <li class="tri_delay_4"><a href="job.html">招聘</a></li>
@@ -91,10 +132,7 @@ Vue.component('top-header', {
                     </div>
                 </div>
             </div>
-            `,
-  data: function () {
-    return {};
-  }
+            `
 });
 Vue.component('mobile-share', {
   template: '<div class="mobile_share_container"><div class="share_grid wechat" style="margin-left: 0"></div></div>',

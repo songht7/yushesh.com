@@ -22,6 +22,8 @@ module.exports = {
   }, {
     "id": 15,
     "ctg": 4,
+    "delete": true,
+    //删除不显示
     "ctgName": "商业空间",
     "title": "建国龙吟日料餐厅",
     "design": "李宏升",
@@ -131,7 +133,7 @@ module.exports = {
     "designConcept": "",
     "content": "<div style='width:50%;margin:0 auto; display:flex;justify-content: center;flex-direction:column;align-content: center;align-items: center;'><p><b>溯源，寻味汉韵，茶楼新境</b></p><p>情感如一盏茶汤。</p><p>有茶的恬淡温暖，有俗世的超脱自得。</p><p>得闲相依， 手握杯盏， 聊平淡家常。</p><p>在如此佳境相饮， 相视心明， 日子越发淡定丰盈 </p><br/><br/><p><b>坐标：云南</b></p><p>项目位于云南昆明，一个温度适宜四季如春的旅游胜地。 本案在茶楼中融合多种新鲜元素使主题丰富多元， 体验直观立体， 细节蔓延亮点， 让你舍不得遗漏每一个眼前的精致。</p><br/><br/><p><b>项目：茶楼</b></p><p>茶楼软装项目， 通过传统茶文化融合创意元素， 碰撞摩擦， 酿造出别致韵味的茶楼设计， 同时也展现了设计师对传统茶艺的情怀及个性的灵动， 并从体验度中把控每一个细节。</p><br/> <br/><p>感恩一杯佳茗，</p><p>感恩一段时光，</p><p>感恩一次邂逅，</p><p>感恩一处佳境，</p><p>感恩您的鉴赏。</p>",
     "dtlImgType": "",
-    "dtlImgs": ["1.png", "2.png", "2.JPG", "3.png", "3.jpg", "4.png", "5.png", "6.png", "7.png"]
+    "dtlImgs": ["1.png", "2.png", "2.JPG", "3.jpg", "4.png", "5.png", "6.png", "7.png"]
   }, {
     "id": 24,
     "ctg": 4,
@@ -290,7 +292,7 @@ module.exports = {
     "designConcept": "",
     "content": "",
     "dtlImgType": "",
-    "dtlImgs": ["1.jpg", "2.jpg", "3.jpg", "4.jpg", "5.jpg", "6.jpg", "7.jpg", "8.jpg", "9.jpg", "10.jpg", "11.jpg", "12.jpg", "13.jpg", "14.jpg", "15.jpg", "16.jpg", "17.jpg", "18.jpg", "19.jpg", "20.jpg", "21.jpg"]
+    "dtlImgs": ["5.jpg", "6.jpg", "7.jpg", "8.jpg", "9.jpg", "10.jpg", "11.jpg", "12.jpg", "13.jpg", "14.jpg", "15.jpg", "16.jpg", "17.jpg", "18.jpg", "19.jpg", "20.jpg", "21.jpg"]
   }, {
     "id": 44,
     "ctg": 4,
