@@ -173,7 +173,7 @@ module.exports = {
             "top": "0"
         }, {
             "url": "c2.jpg",
-            "size": "880x440",
+            "size": "860x440",
             "left": "440",
             "top": "0"
         }, {
@@ -183,7 +183,7 @@ module.exports = {
             "top": "460"
         }, {
             "url": "c4.jpg",
-            "size": "880x440",
+            "size": "860x440",
             "left": "440",
             "top": "460"
         }],
@@ -248,7 +248,7 @@ module.exports = {
             "top": "460"
         }, {
             "url": "c5.jpg",
-            "size": "880x440",
+            "size": "860x440",
             "left": "440",
             "top": "460"
         }],
