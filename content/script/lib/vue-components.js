@@ -143,10 +143,10 @@ Vue.component('mobile-share', {
 Vue.component('footer-box', {
   template: '<div class="foot">\
                 <div id="new_footer_container" class="pc_block">\
-                    <p>版权所有 ©御舍 沪ICP备19029924号-1</p>\
+                    <p>版权所有 ©御舍 <a href="http://www.beian.miit.gov.cn" target="_blank">沪ICP备19029924号-1</a></p>\
                 </div>\
                 <div id="mobile_footer_container" class="mobile_block border-top-1px">\
-                    <p>版权所有 ©御舍 沪ICP备19029924号-1</p>\
+                    <p>版权所有 ©御舍 <a href="http://www.beian.miit.gov.cn" target="_blank">沪ICP备19029924号-1</a></p>\
                 </div>\
             </div>',
   data: function () {
