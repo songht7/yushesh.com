@@ -275,6 +275,6 @@ module.exports = {
     "designConcept": "",
     "content": "",
     "dtlImgType": "full",
-    "dtlImgs": ["1.jpg", "2.jpg", "3.jpg"]
+    "dtlImgs": ["1.jpg", "2.jpg"]
   }]
 };
