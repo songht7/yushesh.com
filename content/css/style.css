@@ -377,7 +377,7 @@
     transition-delay: .1s;
 }
 #new_header_container .sub_nav li span{color:#303030;}
-.nav_sub{opacity: 1;position: absolute;top: 100%;left: -125px;width: 500px;background: #fff;padding: 20px 0 10px;display: flex;justify-content: flex-start;flex-direction: row;}
+.nav_sub{opacity: 1;position: absolute;top: 100%;left: -170px;width: 615px;background: #fff;padding: 20px 0 10px;display: flex;justify-content: flex-start;flex-direction: row;}
 #new_header_container .sub_nav li:hover .nav_sub{opacity:1;}
 #new_header_container .nmbHover .sub_nav li .nav_sub li span{padding: 0 20px 0 0;color: #999;}
 #new_header_container .nmbHover .sub_nav li .nav_sub li:hover span,#new_header_container .nmbHover .sub_nav li .nav_sub li.cnav span{color: #333}

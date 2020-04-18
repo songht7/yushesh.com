@@ -1,54 +1,57 @@
-Vue.component('top-header', {
-    props: {
-        ctgList: {
-            type: Array,
-            default: function(e) {
-                return [{ "id": 1, "label": "办公空间" },
-                    { "id": 2, "label": "会所售楼处" },
-                    { "id": 3, "label": "酒店" },
-                    { "id": 4, "label": "商业空间" },
-                    { "id": 5, "label": "私宅样板房别墅" },
-                    { "id": 6, "label": "文博产业" }
-                ]
-            }
-        }
+Vue.component("top-header", {
+  props: {
+    ctgList: {
+      type: Array,
+      default: function (e) {
+        return [
+          { id: 1, label: "办公空间" },
+          { id: 2, label: "会所售楼处" },
+          { id: 3, label: "酒店" },
+          { id: 4, label: "商业空间" },
+          { id: 5, label: "私宅样板房别墅" },
+          { id: 6, label: "文博产业" },
+          { id: 7, label: "户外景观" },
+          { id: 8, label: "艺术创作" },
+        ];
+      },
     },
-    data: function() {
-        return {
-            cnav: 0
-        }
-    },
-    mounted(e) {
-        var that = this;
-        var _ctg = that.GetUrlParam("ctg");
-        if (_ctg) {
-            that.cnav = _ctg;
-        } else {
-            that.cnav = 0;
-        }
-    },
-    methods: {
-        GetUrlParam(paraName) {
-            var url = window.location.toString();
-            var arrObj = url.split("?");
-            if (arrObj.length > 1) {
-                var arrPara = arrObj[1].split("&");
-                var arr;
+  },
+  data: function () {
+    return {
+      cnav: 0,
+    };
+  },
+  mounted(e) {
+    var that = this;
+    var _ctg = that.GetUrlParam("ctg");
+    if (_ctg) {
+      that.cnav = _ctg;
+    } else {
+      that.cnav = 0;
+    }
+  },
+  methods: {
+    GetUrlParam(paraName) {
+      var url = window.location.toString();
+      var arrObj = url.split("?");
+      if (arrObj.length > 1) {
+        var arrPara = arrObj[1].split("&");
+        var arr;
 
-                for (var i = 0; i < arrPara.length; i++) {
-                    arr = arrPara[i].split("=");
+        for (var i = 0; i < arrPara.length; i++) {
+          arr = arrPara[i].split("=");
 
-                    if (arr != null && arr[0] == paraName) {
-                        return arr[1];
-                    }
-                }
-                return "";
-            } else {
-                return "";
-            }
+          if (arr != null && arr[0] == paraName) {
+            return arr[1];
+          }
         }
+        return "";
+      } else {
+        return "";
+      }
     },
-    template: `<div><div id="new_header_container" class="page_detail pc_block">
+  },
+  template: `<div><div id="new_header_container" class="page_detail pc_block">
                     <div class="nmbHover">
                         <div class="top_logo" onClick="window.location.href='index.html'"><img src="./content/images/logo.png" alt="" /></div>
                         <ul class="sub_nav">
@@ -61,6 +64,7 @@ Vue.component('top-header', {
                             </li>
                             <li><a href="job.html"><span>招聘</span></a></li>
                             <li><a href="contact.html"><span>联系我们</span></a></li>
+                            <li><a href="https://mp.weixin.qq.com/s/esGE1ni9Ns2QchfLLyfAIQ"><span>企业新闻</span></a></li>
                         </ul>
                     </div>
                 </div>
@@ -77,6 +81,7 @@ Vue.component('top-header', {
                                 </ul></li>
                             <li><a href="job.html"><span>招聘</span></a></li>
                             <li><a href="contact.html"><span>联系我们</span></a></li>
+                            <li><a href="https://mp.weixin.qq.com/s/esGE1ni9Ns2QchfLLyfAIQ"><span>企业新闻</span></a></li>
                         </ul>
                     </div>
                 </div>
@@ -100,6 +105,7 @@ Vue.component('top-header', {
                                 </li>
                                 <li class="tri_delay_4"><a href="job.html">招聘</a></li>
                                 <li class="tri_delay_3"><a href="contact.html">联系我们</a></li>
+                                <li class="tri_delay_3"><a href="https://mp.weixin.qq.com/s/esGE1ni9Ns2QchfLLyfAIQ">企业新闻</a></li>
                             </ul>
                         </div>
                         <div class="sub_nav_bg" id="sub_nav_bg"></div>
@@ -113,18 +119,20 @@ Vue.component('top-header', {
                     </div>
                 </div>
             </div>
-            `
-})
+            `,
+});
 
-Vue.component('mobile-share', {
-    template: '<div class="mobile_share_container"><div class="share_grid wechat" style="margin-left: 0"></div></div>',
-    data: function() {
-        return {}
-    }
-})
+Vue.component("mobile-share", {
+  template:
+    '<div class="mobile_share_container"><div class="share_grid wechat" style="margin-left: 0"></div></div>',
+  data: function () {
+    return {};
+  },
+});
 
-Vue.component('footer-box', {
-    template: '<div class="foot">\
+Vue.component("footer-box", {
+  template:
+    '<div class="foot">\
                 <div id="new_footer_container" class="pc_block">\
                     <p>版权所有 ©御舍 <a href="http://www.beian.miit.gov.cn" target="_blank">沪ICP备19029924号-1</a></p>\
                 </div>\
@@ -132,7 +140,7 @@ Vue.component('footer-box', {
                     <p>版权所有 ©御舍 <a href="http://www.beian.miit.gov.cn" target="_blank">沪ICP备19029924号-1</a></p>\
                 </div>\
             </div>',
-    data: function() {
-        return {}
-    }
-})
+  data: function () {
+    return {};
+  },
+});

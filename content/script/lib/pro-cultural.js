@@ -3,7 +3,7 @@ module.exports = {
     "id": 33,
     "ctg": 6,
     "ctgName": "文博产业",
-    "title": "彼岸塔妙乐寺",
+    "title": "妙乐寺",
     "design": "李宏升",
     "designCom": "御舍设计",
     "location": "湖北黄冈",

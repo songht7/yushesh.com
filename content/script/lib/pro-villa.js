@@ -3,7 +3,7 @@ module.exports = {
     "id": 27,
     "ctg": 5,
     "ctgName": "私宅样板房别墅",
-    "title": "九悦庭雅宅",
+    "title": "九悦庭",
     "design": "李宏升",
     "designCom": "御舍设计",
     "location": "江西九江",
