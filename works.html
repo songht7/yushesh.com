@@ -44,9 +44,9 @@
                                         <div :class="['__img_box__text','__img_box__text--'+pro.textRlign]" v-if="pro.txtPlace==(i+1)">
                                             <p>主案设计 | {{pro.design}}</p>
                                             <p>项目名称 | {{pro.title}}</p>
-                                            <p>项目地点 | {{pro.location}}</p>
+                                            <p v-if="pro.location">项目地点 | {{pro.location}}</p>
                                             <p>设计单位 | {{pro.designCom}}</p>
-                                            <p>建筑面积 | {{pro.area}}</p>
+                                            <p v-if="pro.area">建筑面积 | {{pro.area}}</p>
                                         </div>
                                     </div>
                                 </template>
@@ -59,9 +59,9 @@
                             <div class="__img_box__text __img_box__text--right">
                                 <p>主案设计 | {{pro.design}}</p>
                                 <p>项目名称 | {{pro.title}}</p>
-                                <p>项目地点 | {{pro.location}}</p>
+                                <p v-if="pro.location">项目地点 | {{pro.location}}</p>
                                 <p>设计单位 | {{pro.designCom}}</p>
-                                <p>建筑面积 | {{pro.area}}</p>
+                                <p v-if="pro.area">建筑面积 | {{pro.area}}</p>
                             </div>
                         </div>
                     </template>
