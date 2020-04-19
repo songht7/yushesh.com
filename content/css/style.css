@@ -2123,3 +2123,8 @@ body.is_nav{overflow:hidden;}
 /*5*/
 @media(min-width:320px) and (max-width:374px){}
 
+.img-block{padding-bottom: 25px;}
+#detail_main_container .detail_inner_container p.img-block-view{
+    text-align: center;
+    line-height: 2;
+}

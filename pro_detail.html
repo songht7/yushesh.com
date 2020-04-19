@@ -10,7 +10,8 @@
     <meta content="no-cache" http-equiv="pragma" />
     <meta content="0" http-equiv="expires" />
     <meta content="telephone=no,address=no" name="format-detection" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
     <meta name="format-detection" content="telephone=yes" />
@@ -39,7 +40,8 @@
                 <div class="text_part_box fl">
                     <div class="text_info_box">
                         <!-- <p class="text_title">Architectural Design | 建築設計</p> -->
-                        <p class="text_content" style="white-space:nowrap;"><span class="text_title">项目名称</span> | {{detail.title}}</p>
+                        <p class="text_content" style="white-space:nowrap;"><span class="text_title">项目名称</span> |
+                            {{detail.title}}</p>
                     </div>
                     <div class="text_info_box">
                         <p class="text_content"><span class="text_title">主案设计</span> | {{detail.design}}</p>
@@ -59,7 +61,7 @@
                 </div>
                 <div class="text_part_box fr">
                     <div class="text_info_box">
-                        <p class="text_content"><span class="text_title">项目地点</span> | {{detail.location}}</p>
+                        <p class="text_content" v-if="detail.location"><span class="text_title">项目地点</span> | {{detail.location}}</p>
                     </div>
                     <div class="text_info_box" v-if="detail.construction">
                         <p class="text_content"><span class="text_title">设计单位</span> | {{detail.construction}}</p>
@@ -79,15 +81,37 @@
                     <p style="padding:0 0 15px"><span style="color: rgb(48, 48, 48);"></span></p>
                 </template>
                 <template v-if="detail.content">
-                    <div class="dtlCont"><div v-html="detail.content"></div></div>
+                    <div class="dtlCont">
+                        <div v-html="detail.content"></div>
+                    </div>
                     <p style="padding:0 0 15px"><span style="color: rgb(48, 48, 48);"></span></p>
                 </template>
                 <p style="padding:0 0 15px"><span style="color: rgb(48, 48, 48);"></span></p>
-                <div :class="[detail.dtlImgType?'grid-full':'grid']">
-                    <template v-for="img,k in detail.dtlImgs" :key="k">
-                        <div :class="['grid-item',detail.dtlImgType?'grid-item--full':'grid-item--width2','grid_reveal']" data-av-animation="self_slide_up"><img :src='"./content/product/pro_"+detail.id+"/"+img' style="" title="" /></div>
-                    </template>
-                </div>
+                <template v-if="detail.dtlImgObj">
+                    <div :class="[detail.dtlImgType?'grid-full':'grid','img-block']">
+                        <template v-for="img,k in detail.dtlImgs" :key="k">
+                            <p class="img-block-view grid_reveal" data-av-animation="self_slide_up">{{img.title}}</p>
+                            <p class="img-block-view grid_reveal" data-av-animation="self_slide_up"
+                                v-html="img.overview"></p>
+                            <template v-for="ig,kk in img.imgs" :key="kk">
+                                <div :class="['grid-item',detail.dtlImgType?'grid-item--full':'grid-item--width2','grid_reveal']"
+                                    data-av-animation="self_slide_up">
+                                    <img :src='"./content/product/pro_"+detail.id+"/"+ig' />
+                                </div>
+                            </template>
+                        </template>
+                    </div>
+                </template>
+                <template v-else>
+                    <div :class="[detail.dtlImgType?'grid-full':'grid']">
+                        <template v-for="img,k in detail.dtlImgs" :key="k">
+                            <div :class="['grid-item',detail.dtlImgType?'grid-item--full':'grid-item--width2','grid_reveal']"
+                                data-av-animation="self_slide_up">
+                                <img :src='"./content/product/pro_"+detail.id+"/"+img' />
+                            </div>
+                        </template>
+                    </div>
+                </template>
             </div>
         </div>
         <div class="mobile_main_page_body mobile_block" id="detail_container_mobile">
@@ -95,7 +119,7 @@
                 <div class="mobile_project_info">
                     <p class="deep_gray">项目名称 | {{detail.title}}</p>
                     <p class="deep_gray">主案设计 | {{detail.design}}</p>
-                    <p class="deep_gray">项目地点 | {{detail.location}}</p>
+                    <p class="deep_gray" v-if="detail.location">项目地点 | {{detail.location}}</p>
                     <p class="deep_gray">设计单位 | {{detail.construction}}</p>
                     <p class="deep_gray" v-if="detail.area">建筑面积 | {{detail.area}}</p>
                     <p style="padding:0 0 15px"><span style="color: rgb(48, 48, 48);"></span></p>
@@ -106,14 +130,27 @@
                     <p style="padding:0 0 15px"><span style="color: rgb(48, 48, 48);"></span></p>
                 </template>
                 <template v-if="detail.content">
-                    <div class="dtlCont"><div v-html="detail.content"></div></div>
+                    <div class="dtlCont">
+                        <div v-html="detail.content"></div>
+                    </div>
                     <p style="padding:0 0 15px"><span style="color: rgb(48, 48, 48);"></span></p>
                 </template>
                 <div class="moble_project_detail" id="mobile_detail_container">
                     <div class="detail_inner_container" id="pc_detail_container">
                         <div class="grid-mobile">
-                            <template v-for="img,i in detail.dtlImgs" :key="i">
-                                <div class="grid-item grid-item--width2 grid_reveal" data-av-animation="self_slide_up"><img :src='"./content/product/pro_"+detail.id+"/"+img' style="" title="" /></div>
+                            <template v-if="detail.dtlImgObj" v-for="img,k in detail.dtlImgs" :key="k">
+                                <p class="img-block-view grid_reveal" data-av-animation="self_slide_up">{{img.title}}</p>
+                                <p class="img-block-view grid_reveal" data-av-animation="self_slide_up" v-html="img.overview"></p>
+                                <template v-for="ig,kk in img.imgs" :key="kk">
+                                    <div :class="['grid-item',detail.dtlImgType?'grid-item--full':'grid-item--width2','grid_reveal']"
+                                        data-av-animation="self_slide_up">
+                                        <img :src='"./content/product/pro_"+detail.id+"/"+ig' />
+                                    </div>
+                                </template>
+                            </template>
+                            <template v-else v-for="img,i in detail.dtlImgs" :key="i">
+                                <div class="grid-item grid-item--width2 grid_reveal" data-av-animation="self_slide_up">
+                                    <img :src='"./content/product/pro_"+detail.id+"/"+img' style="" title="" /></div>
                             </template>
                         </div>
                     </div>
@@ -124,13 +161,13 @@
         <footer-box></footer-box>
     </div>
     <script>
-    $(function() {
-        // $('.grid').masonry({
-        //     // options
-        //     itemSelector: '.grid-item',
-        //     columnWidth: 0
-        // });
-    });
+        $(function () {
+            // $('.grid').masonry({
+            //     // options
+            //     itemSelector: '.grid-item',
+            //     columnWidth: 0
+            // });
+        });
     </script>
     <script type="text/javascript" src="./content/script/aniview.js"></script>
     <script type="text/javascript" src="./content/script/fastclick.js"></script>
