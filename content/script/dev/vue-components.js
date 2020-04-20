@@ -10,8 +10,8 @@ Vue.component("top-header", {
           { id: 4, label: "商业空间" },
           { id: 5, label: "私宅样板房别墅" },
           { id: 6, label: "文博产业" },
-          { id: 7, label: "户外景观" },
-          { id: 8, label: "艺术创作" },
+          // { id: 7, label: "户外景观" },
+          // { id: 8, label: "艺术创作" },
         ];
       },
     },
