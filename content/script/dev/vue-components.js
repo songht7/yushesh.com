@@ -19,6 +19,7 @@ Vue.component("top-header", {
   data: function () {
     return {
       cnav: 0,
+      newsLink:"https://mp.weixin.qq.com/s/esGE1ni9Ns2QchfLLyfAIQ"
     };
   },
   mounted(e) {
@@ -64,7 +65,7 @@ Vue.component("top-header", {
                             </li>
                             <li><a href="job.html"><span>招聘</span></a></li>
                             <li><a href="contact.html"><span>联系我们</span></a></li>
-                            <li><a href="news.html"><span>企业新闻</span></a></li>
+                            <li><a :href="newsLink" target="_blank"><span>企业新闻</span></a></li>
                         </ul>
                     </div>
                 </div>
@@ -81,7 +82,7 @@ Vue.component("top-header", {
                                 </ul></li>
                             <li><a href="job.html"><span>招聘</span></a></li>
                             <li><a href="contact.html"><span>联系我们</span></a></li>
-                            <li><a href="https://mp.weixin.qq.com/s/esGE1ni9Ns2QchfLLyfAIQ"><span>企业新闻</span></a></li>
+                            <li><a :href="newsLink" target="_blank"><span>企业新闻</span></a></li>
                         </ul>
                     </div>
                 </div>
@@ -105,7 +106,7 @@ Vue.component("top-header", {
                                 </li>
                                 <li class="tri_delay_4"><a href="job.html">招聘</a></li>
                                 <li class="tri_delay_3"><a href="contact.html">联系我们</a></li>
-                                <li class="tri_delay_3"><a href="https://mp.weixin.qq.com/s/esGE1ni9Ns2QchfLLyfAIQ">企业新闻</a></li>
+                                <li class="tri_delay_3"><a :href="newsLink">企业新闻</a></li>
                             </ul>
                         </div>
                         <div class="sub_nav_bg" id="sub_nav_bg"></div>
