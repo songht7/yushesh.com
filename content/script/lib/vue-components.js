@@ -21,9 +21,13 @@ Vue.component("top-header", {
         }, {
           id: 6,
           label: "文博产业"
-        } // { id: 7, label: "户外景观" },
-        // { id: 8, label: "艺术创作" },
-        ];
+        }, {
+          id: 7,
+          label: "户外景观"
+        }, {
+          id: 8,
+          label: "艺术创作"
+        }];
       }
     }
   },
