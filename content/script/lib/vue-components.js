@@ -21,16 +21,20 @@ Vue.component("top-header", {
         }, {
           id: 6,
           label: "文博产业"
-        } // { id: 7, label: "户外景观" },
-        // { id: 8, label: "艺术创作" },
-        ];
+        }, {
+          id: 7,
+          label: "户外景观"
+        }, {
+          id: 8,
+          label: "艺术创作"
+        }];
       }
     }
   },
   data: function () {
     return {
       cnav: 0,
-      newsLink: '' //"https://mp.weixin.qq.com/s/esGE1ni9Ns2QchfLLyfAIQ"
+      newsLink: 'https://mp.weixin.qq.com/s/esGE1ni9Ns2QchfLLyfAIQ' //"https://mp.weixin.qq.com/s/esGE1ni9Ns2QchfLLyfAIQ"
 
     };
   },
