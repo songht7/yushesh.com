@@ -81,7 +81,7 @@ Vue.component("top-header", {
                                 </ul></li>
                             <li><a href="job.html"><span>招聘</span></a></li>
                             <li><a href="contact.html"><span>联系我们</span></a></li>
-                            <li><a href="news.html"><span>企业新闻</span></a></li>
+                            <li><a href="https://mp.weixin.qq.com/s/esGE1ni9Ns2QchfLLyfAIQ"><span>企业新闻</span></a></li>
                         </ul>
                     </div>
                 </div>
