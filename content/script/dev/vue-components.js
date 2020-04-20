@@ -10,8 +10,8 @@ Vue.component("top-header", {
           { id: 4, label: "商业空间" },
           { id: 5, label: "私宅样板房别墅" },
           { id: 6, label: "文博产业" },
-          { id: 7, label: "户外景观" },
-          { id: 8, label: "艺术创作" },
+          // { id: 7, label: "户外景观" },
+          // { id: 8, label: "艺术创作" },
         ];
       },
     },
@@ -19,7 +19,7 @@ Vue.component("top-header", {
   data: function () {
     return {
       cnav: 0,
-      newsLink:"https://mp.weixin.qq.com/s/esGE1ni9Ns2QchfLLyfAIQ"
+      newsLink:'',//"https://mp.weixin.qq.com/s/esGE1ni9Ns2QchfLLyfAIQ"
     };
   },
   mounted(e) {
@@ -65,7 +65,7 @@ Vue.component("top-header", {
                             </li>
                             <li><a href="job.html"><span>招聘</span></a></li>
                             <li><a href="contact.html"><span>联系我们</span></a></li>
-                            <li><a :href="newsLink" target="_blank"><span>企业新闻</span></a></li>
+                            <li v-if="newsLink"><a :href="newsLink" target="_blank"><span>企业新闻</span></a></li>
                         </ul>
                     </div>
                 </div>
@@ -82,7 +82,7 @@ Vue.component("top-header", {
                                 </ul></li>
                             <li><a href="job.html"><span>招聘</span></a></li>
                             <li><a href="contact.html"><span>联系我们</span></a></li>
-                            <li><a :href="newsLink" target="_blank"><span>企业新闻</span></a></li>
+                            <li v-if="newsLink"><a :href="newsLink" target="_blank"><span>企业新闻</span></a></li>
                         </ul>
                     </div>
                 </div>
@@ -106,7 +106,7 @@ Vue.component("top-header", {
                                 </li>
                                 <li class="tri_delay_4"><a href="job.html">招聘</a></li>
                                 <li class="tri_delay_3"><a href="contact.html">联系我们</a></li>
-                                <li class="tri_delay_3"><a :href="newsLink">企业新闻</a></li>
+                                <li class="tri_delay_3" v-if="newsLink"><a :href="newsLink">企业新闻</a></li>
                             </ul>
                         </div>
                         <div class="sub_nav_bg" id="sub_nav_bg"></div>
