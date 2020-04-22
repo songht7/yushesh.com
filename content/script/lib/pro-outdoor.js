@@ -5,7 +5,7 @@ module.exports = {
     ctgName: "户外景观",
     title: "银都名墅",
     design: "梁坤",
-    designCom: "御舍设计",
+    designCom: "庭合景观",
     location: "中国上海",
     construction: "御舍（上海）建设工程有限公司",
     area: "106㎡",
@@ -45,7 +45,7 @@ module.exports = {
     ctgName: "户外景观",
     title: "水都南岸",
     design: "李向阳",
-    designCom: "御舍设计",
+    designCom: "庭合景观",
     location: "中国上海",
     construction: "御舍（上海）建设工程有限公司",
     area: "110㎡",
@@ -56,14 +56,14 @@ module.exports = {
     designConcept: "",
     content: "",
     dtlImgType: "",
-    dtlImgs: ["1.jpg", "2.jpg", "3.jpg", "4.jpg", "5.jpg", "6.jpg"]
+    dtlImgs: ["1.jpg", "2.jpg", "3.jpg", "4.jpg"]
   }, {
     id: 54,
     ctg: 7,
     ctgName: "户外景观",
     title: "上海大都会",
     design: "杨玥",
-    designCom: "御舍设计",
+    designCom: "庭合景观",
     location: "中国上海",
     construction: "御舍（上海）建设工程有限公司",
     area: "190㎡",
@@ -111,6 +111,6 @@ module.exports = {
     content: "",
     dtlImgType: "",
     //full
-    dtlImgs: ["1.jpg", "2.jpg", "3.jpg", "4.jpg", "5.jpg"]
+    dtlImgs: ["1.jpg", "2.jpg", "4.jpg", "5.jpg"]
   }]
 };

@@ -19,7 +19,8 @@ Vue.component("top-header", {
   data: function () {
     return {
       cnav: 0,
-      newsLink:'https://mp.weixin.qq.com/s/esGE1ni9Ns2QchfLLyfAIQ',//"https://mp.weixin.qq.com/s/esGE1ni9Ns2QchfLLyfAIQ"
+      newsLink:
+        "https://mp.weixin.qq.com/mp/profile_ext?action=home&__biz=MzI2NzI5NTg1Nw==&scene=124#wechat_redirect", //"https://mp.weixin.qq.com/s/esGE1ni9Ns2QchfLLyfAIQ"
     };
   },
   mounted(e) {
@@ -60,7 +61,7 @@ Vue.component("top-header", {
                             <li>
                                 <a href="works.html"><span>作品</span></a>
                                 <ul class="nav_sub">
-                                    <li v-for="c,i in ctgList" :key="i" :class="[cnav==c.id?'cnav':'']"><a :href='"works.html?ctg="+c.id'><span>{{c.label}}</span></a></li>
+                                    <li v-for="c,i in ctgList" :key="i" :class="[cnav==c.id?'cnav':'']"><a :href='c.id!=8?"works.html?ctg="+c.id:"pro_detail.html?ctg="+c.id+"&id=55"'><span>{{c.label}}</span></a></li>
                                 </ul>
                             </li>
                             <li><a href="job.html"><span>招聘</span></a></li>
@@ -78,7 +79,7 @@ Vue.component("top-header", {
                             </li>
                             <li><a href="works.html"><span>作品</span></a>
                                 <ul class="nav_sub">
-                                    <li v-for="c,k in ctgList" :key="k" :class="[cnav==c.id?'cnav':'']"><a :href='"works.html?ctg="+c.id'><span>{{c.label}}</span></a></li>
+                                    <li v-for="c,k in ctgList" :key="k" :class="[cnav==c.id?'cnav':'']"><a :href='c.id!=8?"works.html?ctg="+c.id:"pro_detail.html?ctg="+c.id+"&id=55"'><span>{{c.label}}</span></a></li>
                                 </ul></li>
                             <li><a href="job.html"><span>招聘</span></a></li>
                             <li><a href="contact.html"><span>联系我们</span></a></li>
@@ -101,7 +102,7 @@ Vue.component("top-header", {
                                 <li class="tri_delay_1">
                                     <a href="works.html">作品</a>
                                     <ul class="nav_sub_m">
-                                        <li v-for="c,l in ctgList" :key="l" :class="[cnav==c.id?'cnav':'']"><a :href='"works.html?ctg="+c.id'><span>{{c.label}}</span></a></li>
+                                        <li v-for="c,l in ctgList" :key="l" :class="[cnav==c.id?'cnav':'']"><a :href='c.id!=8?"works.html?ctg="+c.id:"pro_detail.html?ctg="+c.id+"&id=55"'><span>{{c.label}}</span></a></li>
                                     </ul>
                                 </li>
                                 <li class="tri_delay_4"><a href="job.html">招聘</a></li>
