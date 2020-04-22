@@ -61,7 +61,8 @@
                 </div>
                 <div class="text_part_box fr">
                     <div class="text_info_box">
-                        <p class="text_content" v-if="detail.location"><span class="text_title">项目地点</span> | {{detail.location}}</p>
+                        <p class="text_content" v-if="detail.location"><span class="text_title">项目地点</span> |
+                            {{detail.location}}</p>
                     </div>
                     <div class="text_info_box" v-if="detail.construction">
                         <p class="text_content"><span class="text_title">设计单位</span> | {{detail.construction}}</p>
@@ -90,12 +91,15 @@
                 <template v-if="detail.dtlImgObj">
                     <div :class="[detail.dtlImgType?'grid-full':'grid','img-block']">
                         <template v-for="img,k in detail.dtlImgs" :key="k">
-                            <p class="img-block-view grid_reveal" data-av-animation="self_slide_up">{{img.title}}</p>
-                            <p class="img-block-view grid_reveal" data-av-animation="self_slide_up"
-                                v-html="img.overview"></p>
                             <template v-for="ig,kk in img.imgs" :key="kk">
                                 <div :class="['grid-item',detail.dtlImgType?'grid-item--full':'grid-item--width2','grid_reveal']"
                                     data-av-animation="self_slide_up">
+                                    <template v-if="kk<=0">
+                                        <p v-if="img.title" class="img-block-view grid_reveal" data-av-animation="self_slide_up">
+                                            {{img.title}}</p>
+                                        <p v-if="img.overview" class="img-block-view grid_reveal" data-av-animation="self_slide_up"
+                                            v-html="img.overview"></p>
+                                    </template>
                                     <img :src='"./content/product/pro_"+detail.id+"/"+ig' />
                                 </div>
                             </template>
@@ -139,10 +143,12 @@
                     <div class="detail_inner_container" id="pc_detail_container">
                         <div class="grid-mobile">
                             <template v-if="detail.dtlImgObj" v-for="img,k in detail.dtlImgs" :key="k">
-                                <p class="img-block-view grid_reveal" data-av-animation="self_slide_up">{{img.title}}</p>
-                                <p class="img-block-view grid_reveal" data-av-animation="self_slide_up" v-html="img.overview"></p>
+                                <p class="img-block-view grid_reveal" data-av-animation="self_slide_up">{{img.title}}
+                                </p>
+                                <p class="img-block-view grid_reveal" data-av-animation="self_slide_up"
+                                    v-html="img.overview"></p>
                                 <template v-for="ig,kk in img.imgs" :key="kk">
-                                    <div :class="['grid-item',detail.dtlImgType?'grid-item--full':'grid-item--width2','grid_reveal']"
+                                    <div :class="['grid-item','grid-item--width2','grid_reveal']"
                                         data-av-animation="self_slide_up">
                                         <img :src='"./content/product/pro_"+detail.id+"/"+ig' />
                                     </div>

@@ -17,13 +17,14 @@ module.exports = {
       designConcept: "",
       content: "",
       dtlImgObj: true,
-      dtlImgType: "full", //full
+      dtlImgType: "", //full
       dtlImgs: [
         {
           title: "倒影装置-戏苑",
           overview: "庭树叶齐花落尽，屋深尘动燕初回",
           design: "李宏升",
           date: "2019",
+          dtlImgType: "full", //full
           imgs: ["101.jpg"],
         },
         {
@@ -31,6 +32,7 @@ module.exports = {
           overview: "乘秋更欲西山雨，一洗郊原晚稻香",
           design: "李宏升",
           date: "2019",
+          dtlImgType: "full", //full
           imgs: ["201.jpg"],
         },
         {
@@ -38,6 +40,7 @@ module.exports = {
           overview: "净君扫浮尘，凉友招清风",
           design: "李宏升",
           date: "2019",
+          dtlImgType: "full", //full
           imgs: ["301.jpg"],
         },
         {
@@ -46,6 +49,7 @@ module.exports = {
             "<span>一见即佳，渐看渐佳</span><br/><span> 似拟碧鸾栖宝阁，岂同赤雁集天池；</span><br/><span>徘徊嘹吠当丹关，故使憧憧庶俗知。</span>",
           design: "李宏升",
           date: "2019",
+          dtlImgType: "full", //full
           imgs: ["401.jpg"],
         },
         {
@@ -53,6 +57,7 @@ module.exports = {
           overview: "<span>红日初升，其道大光</span>",
           design: "李宏升",
           date: "2019",
+          dtlImgType: "full", //full
           imgs: ["501.jpg"],
         },
         {
@@ -60,6 +65,7 @@ module.exports = {
           overview: "<span>真珠帘卷洪泼墨，天淡银河磨化红</span>",
           design: "李宏升",
           date: "2019",
+          dtlImgType: "full", //full
           imgs: ["601.jpg"],
         },
         {
@@ -67,6 +73,7 @@ module.exports = {
           overview: "<span>观抑扬褒贬，座中常有剧中</span>",
           design: "李宏升",
           date: "2019",
+          dtlImgType: "full", //full
           imgs: ["701.jpg"],
         },
         {
@@ -74,6 +81,7 @@ module.exports = {
           overview: "<span>花绽木棉红似火，云蒸霞蔚壮山河</span>",
           design: "李宏升",
           date: "2019",
+          dtlImgType: "full", //full
           imgs: ["801.jpg"],
         },
         {
@@ -81,6 +89,7 @@ module.exports = {
           overview: "<span>渴日绝壁出，漾舟清光旁</span>",
           design: "李宏升",
           date: "2019",
+          dtlImgType: "full", //full
           imgs: ["901.jpg"],
         },
         {
@@ -89,6 +98,7 @@ module.exports = {
             "<span>墨弄枝桠鱼自跃，惯偷红果鸟无声</span><br><span>红果方当熟，清阴亦渐成</span>",
           design: "李宏升",
           date: "2019",
+          dtlImgType: "full", //full
           imgs: ["1001.jpg"],
         },
         {
@@ -96,6 +106,7 @@ module.exports = {
           overview: "<span>飞泉洒液恒疑雨，应是梦中飞做蝶</span>",
           design: "李宏升",
           date: "2019",
+          dtlImgType: "full", //full
           imgs: ["1101.jpg"],
         },
         {
@@ -103,6 +114,7 @@ module.exports = {
           overview: "<span>铜簧韵脆锵寒竹，新声慢奏移纤玉</span>",
           design: "李宏升",
           date: "2019",
+          dtlImgType: "", //full
           imgs: ["1201.jpg", "1202.jpg"],
         },
         {
@@ -110,6 +122,7 @@ module.exports = {
           overview: "<span>日入群动息，归鸟趋林鸣</span>",
           design: "李宏升",
           date: "2019",
+          dtlImgType: "full", //full
           imgs: ["1301.jpg"],
         },
         {
@@ -117,6 +130,7 @@ module.exports = {
           overview: "<span>滴水能把石穿透，万事功到自然成</span>",
           design: "李宏升",
           date: "2019",
+          dtlImgType: "full", //full
           imgs: ["1401.jpg"],
         },
         {
@@ -124,6 +138,7 @@ module.exports = {
           overview: "<span>半江瑟瑟半江红</span>",
           design: "李宏升",
           date: "2019",
+          dtlImgType: "full", //full
           imgs: ["1501.jpg"],
         },
         {
@@ -131,6 +146,7 @@ module.exports = {
           overview: "<span>红鱼醉掩翠蕉门，骤风叶浇尘</span>",
           design: "李宏升",
           date: "2019",
+          dtlImgType: "", //full
           imgs: ["1601.jpg", "1602.jpg"],
         },
       ],
