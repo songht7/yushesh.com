@@ -1598,7 +1598,7 @@ body.open .menu-main li a{
 .mobile_main_page_body .mobile_main_body_container{margin:0 .6rem;}
 .mobile_main_body_container > .title,.int-block-mobile > .title{font-size:.59rem;color:#303030;font-family:'itc_xlt',sans-serif;text-transform:uppercase;font-weight:bold;margin-top:.1rem;}
 .mobile_main_body_container > .text,.int-block-mobile > .text{font-size:.33rem;line-height:1.7;}
-.mobile_main_body_container > .title.sub_title,.int-block-mobile > .title.sub_title{font-size:.45rem;font-weight: 400}
+.mobile_main_body_container > .title.sub_title,.int-block-mobile > .title.sub_title{font-size:.4rem;font-weight: 400;line-height: 1.4;}
 .int-block-mobile{padding-bottom: 0.5rem}
 /*联系我们*/
 #contact_container_mobile{}
