@@ -3,11 +3,14 @@
 }
 .news-li {
   overflow: hidden;
-  padding-bottom: 0.2rem;
+  padding: 0.1rem;
   margin-bottom: 0.2rem;
   border-bottom: 1px solid #eeeeee;
   width: 100%;
   cursor: pointer;
+}
+.news-li:hover {
+  background: #f9f8f8;
 }
 .news-left {
   float: left;
