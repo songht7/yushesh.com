@@ -1,11 +1,13 @@
 // npx babel dev -d lib
 import product from "./product.json.js";
+import news from "./news.json.js";
 new Vue({
   el: "#Wrapper",
   data: {
     id: "",
     ctg: "",
     products: product.proList,
+    news: news.newsList,
     detail: {},
   },
   created(e) {
@@ -13,6 +15,7 @@ new Vue({
   },
   mounted(e) {
     console.log("mounted:");
+    console.log("news:", this.news);
     var that = this;
     var _ctg = that.GetUrlParam("ctg");
     var _id = that.GetUrlParam("id");
