@@ -3,8 +3,8 @@
 }
 .news-li {
   overflow: hidden;
-  padding-bottom: 0.1rem;
-  margin-bottom: 0.1rem;
+  padding-bottom: 0.2rem;
+  margin-bottom: 0.2rem;
   border-bottom: 1px solid #eeeeee;
   width: 100%;
   cursor: pointer;
@@ -28,13 +28,13 @@
 }
 .n-title {
   padding-right: 10px;
-  font-size: 24px;
+  font-size: 18px;
   line-height: 1.4;
 }
 .n-date {
-  font-size: 18px;
+  font-size: 16px;
   line-height: 1.4;
-  color: #dddddd;
+  color: #cccccc;
 }
 #news_container .main_bone_container {
   width: 1100px;
